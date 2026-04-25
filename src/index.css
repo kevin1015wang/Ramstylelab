@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@700;900&family=Libre+Baskerville:ital@1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-athletic: "Space Grotesk", sans-serif;
+  --font-serif: "Libre Baskerville", serif;
+
+  --color-csu-green: #1E4D2B;
+  --color-csu-gold: #C8C372;
+  --color-csu-cream: #F2F2F2;
+  --color-csu-white: #FFFFFF;
+  --color-csu-black: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-csu-cream text-csu-green antialiased overflow-hidden h-screen;
+    font-feature-settings: "tnum" on, "lnum" on;
+  }
+}
+
+/* Brutalist UI Components */
+.brutal-border {
+  @apply border-2 border-csu-green;
+}
+
+.brutal-button {
+  @apply bg-csu-green text-white px-6 py-4 font-black uppercase tracking-widest transition-all hover:bg-csu-green/90 active:translate-x-1 active:translate-y-1 rounded-none flex items-center justify-center gap-2;
+}
+
+.brutal-button-gold {
+  @apply bg-csu-gold text-csu-green px-6 py-4 font-black uppercase tracking-widest transition-all hover:bg-[#b8b362] active:translate-x-1 active:translate-y-1 rounded-none flex items-center justify-center gap-2;
+}
+
+.brutal-card {
+  @apply bg-white border-2 border-csu-green shadow-[12px_12px_0px_#C8C372];
+}
+
+.brutal-canvas {
+  @apply bg-white border-2 border-csu-green shadow-[20px_20px_0px_#C8C372];
+}
+
+.label-micro {
+  @apply text-[10px] font-black uppercase tracking-tighter opacity-40 italic underline mb-4 block;
+}
+
+.grid-background {
+  background-image: radial-gradient(#1E4D2B 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-csu-green/20;
+}
+
+.clip-path-polygon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
